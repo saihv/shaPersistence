@@ -1,0 +1,3 @@
+cython
+ripser
+persim==0.0.9
