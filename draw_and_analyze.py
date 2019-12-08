@@ -29,7 +29,7 @@ class ImageGenerator:
         self.figure = plt.figure()
         #self.ax = plt.plot()
         self.rips = Rips()
-        self.pim = PersImage(spread=1, pixels=[50,50], verbose=True)
+        
         plt.ion()
         plt.show()
         plt.draw()
@@ -53,7 +53,7 @@ class ImageGenerator:
         self.rips.plot(pers_dgms,legend=True) 
         plt.title("Persistence diagram")       
         ax = plt.subplot(1,3,3)
-        
+        self.pim = PersImage(spread=1, pixels=[50,50], verbose=True)
         img = self.pim.transform(pers_dgms[1])
         plt.title("Pers. image for $H_1$\n")
         self.pim.show(img, ax)
